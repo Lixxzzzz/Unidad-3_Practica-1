@@ -34,12 +34,13 @@
             btnReiniciar = new Button();
             lblMostrado = new Label();
             Cronometro = new System.Windows.Forms.Timer(components);
+            txtTiempo = new TextBox();
             SuspendLayout();
             // 
             // btnIniciar
             // 
             btnIniciar.BackColor = Color.Cyan;
-            btnIniciar.Location = new Point(63, 258);
+            btnIniciar.Location = new Point(63, 317);
             btnIniciar.Name = "btnIniciar";
             btnIniciar.Size = new Size(176, 59);
             btnIniciar.TabIndex = 0;
@@ -50,7 +51,7 @@
             // btnDetener
             // 
             btnDetener.BackColor = Color.Cyan;
-            btnDetener.Location = new Point(245, 258);
+            btnDetener.Location = new Point(245, 317);
             btnDetener.Name = "btnDetener";
             btnDetener.Size = new Size(165, 57);
             btnDetener.TabIndex = 1;
@@ -61,7 +62,7 @@
             // btnReiniciar
             // 
             btnReiniciar.BackColor = Color.Cyan;
-            btnReiniciar.Location = new Point(416, 258);
+            btnReiniciar.Location = new Point(416, 317);
             btnReiniciar.Name = "btnReiniciar";
             btnReiniciar.Size = new Size(171, 59);
             btnReiniciar.TabIndex = 2;
@@ -73,7 +74,7 @@
             // 
             lblMostrado.AutoSize = true;
             lblMostrado.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMostrado.Location = new Point(111, 93);
+            lblMostrado.Location = new Point(177, 62);
             lblMostrado.Name = "lblMostrado";
             lblMostrado.Size = new Size(264, 96);
             lblMostrado.TabIndex = 3;
@@ -83,12 +84,20 @@
             // 
             Cronometro.Tick += Cronometro_Tick;
             // 
+            // txtTiempo
+            // 
+            txtTiempo.Location = new Point(195, 232);
+            txtTiempo.Name = "txtTiempo";
+            txtTiempo.Size = new Size(246, 31);
+            txtTiempo.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 192);
             ClientSize = new Size(644, 450);
+            Controls.Add(txtTiempo);
             Controls.Add(lblMostrado);
             Controls.Add(btnReiniciar);
             Controls.Add(btnDetener);
@@ -107,5 +116,6 @@
         private Button btnReiniciar;
         private Label lblMostrado;
         private System.Windows.Forms.Timer Cronometro;
+        private TextBox txtTiempo;
     }
 }
